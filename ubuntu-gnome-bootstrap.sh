@@ -9,7 +9,13 @@ sudo apt upgrade -y
 
 # install some basics
 
-sudo apt install git curl nodejs npm python-pip virtualbox -y
+sudo apt install zsh git curl nodejs npm python-pip chromium-browser virtualbox -y
+
+# oh my zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# change shell to zsh
+chsh -s $(which zsh)
 
 # global dark theme
 
@@ -45,7 +51,11 @@ firefox & echo 'Opening Add-on pages in in 3s...'
 
 sleep 3
 
-firefox -new-tab https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/ -new-tab https://addons.mozilla.org/en-US/firefox/addon/leechblock/ -new-tab https://addons.mozilla.org/en-US/firefox/addon/self-destructing-cookies/ -new-tab https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/
+# webextensions only - for firefox 57+ support
+firefox -new-tab 'https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/'\
+        -new-tab 'https://addons.mozilla.org/en-US/firefox/addon/leechblock-ng/'\
+        -new-tab 'https://addons.mozilla.org/en-US/firefox/addon/cookie-autodelete/'\
+        -new-tab 'https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/'
 
 # install atom from deb
 # https://askubuntu.com/a/51859
@@ -61,3 +71,8 @@ apm install Delete-Whitelines advanced-open-file atom-beautify atom-idiomatic-co
 
 # open atom
 atom &;
+
+echo Done!
+
+# switch to zsh
+zsh
