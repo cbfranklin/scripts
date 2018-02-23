@@ -1,3 +1,7 @@
+# enable tap-to-click for trackpads
+
+synclient TapButton1=1 TapButton2=3 TapButton3=2
+
 # add some repositories
 
 sudo add-apt-repository ppa:numix/ppa -y
@@ -9,7 +13,7 @@ sudo apt upgrade -y
 
 # install some basics
 
-sudo apt install zsh git curl nodejs npm python-pip chromium-browser virtualbox vlc -y
+sudo apt install zsh git curl nodejs npm python-pip chromium-browser virtualbox vlc variety -y
 
 # oh my zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -27,10 +31,7 @@ gsettings set org.gnome.desktop.interface gtk-theme "Numix"
 gsettings set org.gnome.desktop.interface icon-theme "Numix-Circle"
 gsettings set org.gnome.desktop.wm.preferences theme "Numix"
 
-# codfish point wallpaper
-
-wget http://cfrank.co/archive/default-wallpaper.jpg ~/Pictures/Wallpaper/default-wallpaper.jpg -O ~/Pictures/Wallpaper/default-wallpaper.jpg
-gsettings set org.gnome.desktop.background picture-uri ~/Pictures/Wallpaper/default-wallpaper.jpg
+# wallpaper
 
 # disable alert sounds
 # https://askubuntu.com/a/178480
@@ -66,8 +67,8 @@ rm -f "$TEMP_DEB"
 
 apm install Delete-Whitelines advanced-open-file atom-beautify atom-idiomatic-comments-css-snippets atom-material-numix-syntax atom-terminal auto-detect-indentation autoclose-html base-darker-high-contrast-syntax- busy-signal color-picker css-specificity cssfmt docblockr es-javascript expose file-icons highlight-selected intentions jumpy language-babel language-mustache linter linter-csslint linter-htmlhint linter-jshint linter-ui-default lorem minimap minimap-highlight-selected numix-ui open-recent package-sync pigments remote-atom sort-lines
 
-# open atom
-atom &;
+# open variety
+variety &;
 
 echo Done!
 
