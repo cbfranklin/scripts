@@ -2,6 +2,10 @@
 
 synclient TapButton1=1 TapButton2=3 TapButton3=2
 
+# remove all launcher apps except firefox and terminal
+
+gsettings set org.gnome.shell favorite-apps "['firefox.desktop', 'org.gnome.Terminal.desktop']"
+
 # add some repositories
 
 sudo add-apt-repository ppa:numix/ppa -y
