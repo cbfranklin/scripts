@@ -2,9 +2,9 @@
 
 synclient TapButton1=1 TapButton2=3 TapButton3=2
 
-# remove all launcher apps except firefox and terminal
+# remove all launcher apps except firefox, terminal, nautilus
 
-gsettings set org.gnome.shell favorite-apps "['firefox.desktop', 'org.gnome.Terminal.desktop']"
+gsettings set org.gnome.shell favorite-apps "['firefox.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.Nautilus.desktop']"
 
 # add some repositories
 
