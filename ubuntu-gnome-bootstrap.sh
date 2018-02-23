@@ -35,8 +35,6 @@ gsettings set org.gnome.desktop.interface gtk-theme "Numix"
 gsettings set org.gnome.desktop.interface icon-theme "Numix-Circle"
 gsettings set org.gnome.desktop.wm.preferences theme "Numix"
 
-# wallpaper
-
 # disable alert sounds
 # https://askubuntu.com/a/178480
 
