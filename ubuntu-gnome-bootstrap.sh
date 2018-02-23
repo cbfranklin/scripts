@@ -9,13 +9,10 @@ sudo apt upgrade -y
 
 # install some basics
 
-sudo apt install zsh git curl nodejs npm python-pip chromium-browser virtualbox -y
+sudo apt install zsh git curl nodejs npm python-pip chromium-browser virtualbox vlc -y
 
 # oh my zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-# change shell to zsh
-chsh -s $(which zsh)
 
 # global dark theme
 
@@ -74,5 +71,6 @@ atom &;
 
 echo Done!
 
-# switch to zsh
+# change shell to zsh
+chsh -s $(which zsh)
 zsh
